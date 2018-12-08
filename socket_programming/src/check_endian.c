@@ -8,7 +8,7 @@ int main(void)
     int i       = 0x00000001;
     int endian  = 0;
     
-    endian = (char)(i)?LITTLE:BIG;
+    endian = (char)(i) == 0x01 ? LITTLE:BIG;
     
     if(endian == LITTLE)
         printf("THIS MACHINE IS LITTLE-ENDIAN\n");
